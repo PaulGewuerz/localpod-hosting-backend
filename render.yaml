@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: localpod-hosting-api
+    env: python
+    buildCommand: ""
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: PLAYHT_API_KEY
+        sync: false
+      - key: PLAYHT_USER_ID
+        sync: false
